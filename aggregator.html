@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <title>Новостной агрегатор ООЭ</title>
+</head>
+
+<body>
+    <header>
+        <button class="account">Личный кабинет пользователя</button>
+        <h1>Новостной агрегатор ООЭ</h1>
+
+    </header>
+    <form class="search" action="">
+        <div class="search_parametrs">
+            <div class="search_parametrs_period">
+                <p><b>Период:</b></p>
+                <p>c</p>
+                <input type="date" id="date1">
+                <p>по</p>
+                <input type="date" id="date2">
+
+            </div>
+            <div class="search_parametrs_site">
+                <p><b>Сайты:</b></p>
+
+                <input type="checkbox" id="1" class="check_style" value="http://www.consultant.ru/"><label for="1">
+                    1. http://www.consultant.ru/</label>
+                <input type="checkbox" id="2" class="check_style" value="https://gaap.ru/"><label for="2">
+                    2. https://gaap.ru/</label>
+                <input type="checkbox" id="3" class="check_style" value="https://rbc.ru/"><label for="3">
+                    3. https://rbc.ru/</label>
+                <input type="checkbox" id="4" class="check_style" value="https://minfin.gov.ru/ru/"><label for="4">
+                    4. https://minfin.gov.ru/ru/</label>
+                <input type="checkbox" id="5" class="check_style" value="https://sroaas.ru/pc/novosti"><label for="5">
+                    5. https://sroaas.ru/pc/novosti</label>
+                <input type="checkbox" id="6" class="check_style" value="https://www.iia-ru.ru/"><label for="6">
+                    6. https://www.iia-ru.ru/</label>
+                <input type="checkbox" id="7" class="check_style" value="https://www.cbr.ru/"><label for="7">
+                    7. https://www.cbr.ru/</label>
+                <input type="checkbox" id="8" class="check_style" value="https://www.audit-it.ru/"><label for="8">
+                    8. https://www.audit-it.ru/</label>
+                <br>
+                <input type="checkbox" id="9" class="check_style" value=""><label for="9">
+                    Глобальный поиск</label>
+
+
+
+            </div>
+            <div class="search_parametrs_loading">
+                <div class="search_parametrs_loading_keywords">
+                    <p>Загрузить ключевые слова:</p>
+                    <input type="file" class="input__file" id="input_keywords" accept=".xls,.xlsx">
+                    <label class="input__file-button" for="input_keywords">
+                        <span class="input__file-button-text"></span>
+                        <span>
+                            <img src="image/file.png" class="input__file-icon-wrapper" alt="">
+                        </span>
+
+                    </label>
+
+                </div>
+                <p class="or_style">ИЛИ</p>
+                <div class="search_parametrs_loading_ml-model">
+                    <p>Загрузить файлы для ML-модели:</p>
+                    <input type="file" id="input_ml-model" multiple accept=".xls,.xlsx" class="input__file">
+                    <label class="input__file-button" for="input_ml-model">
+                        <span class="input__file-button-text"></span>
+
+                        <span>
+                            <img src="image/file.png" class="input__file-icon-wrapper" alt="">
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <div class="button-block">
+            <button>Инструкция</button>
+            <input type="submit" value="Запустить поиск">
+
+        </div>
+    </form>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

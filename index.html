@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Добро пожаловать!</title>
+</head>
+
+<body>
+    <header>
+        <h1>Новостной агрегатор ООЭ</h1>
+
+    </header>
+    <div class="authorization">
+        <p>Добро пожаловать!<br> Если Вы-сотрудник СВА, введите логин и пароль:</p>
+        <a href="#authorization" name="modal"><button>Войти</button></a>
+
+    </div>
+    <div id="boxes">
+        <div id="authorization" class="window">
+            <div class="close"><a href="#">&times;</a></div>
+            <div class="modal-body">
+                <h3>Данные для входа</h3>
+                <form action="">
+                    <p>Электронная почта:</p>
+                    <input type="email" required>
+                    <p>Пароль:</p>
+                    <input type="password" required>
+                    <input type="submit" name="submit" value="Отправить">
+
+                </form>
+
+            </div>
+
+        </div>
+        <div id="back"></div>
+    </div>
+
+    <div class="registration">
+        <p>Первый раз на сайте? Забыли пароль?<br>Получите доступ/восстановите пароль:</p>
+        <a href="#registration" name="modal"><button>Получить доступ</button></a>
+    </div>
+    <!-- Содержимое модального окна -->
+    <div id="boxes">
+        <div id="registration" class="window">
+            <div class="close"><a href="#">&times;</a></div>
+            <div class="modal-body">
+                <h3>Заполните поля:</h3>
+                <form action="">
+                    <div class="name">
+                        <p>ФИО</p>
+                        <input type="text" required>
+
+                    </div>
+                    <div class="select_tb">
+
+                        <p>Имя ТБ</p>
+                        <select size="3" class="select" name="bank">
+                            <option disabled>Выбрать</option>
+
+                            <option value="ЦА">ЦА</option>
+                            <option value="ББ">ББ</option>
+                            <option value="ВВБ">ВВБ</option>
+                            <option value="ДВБ">ДВБ</option>
+                            <option selected value=">ЮЗБ">ЮЗБ</option>
+                        </select>
+                    </div>
+                    <p>Электронная почта</p>
+                    <input type="email" required>
+                    <p>Комментарий (при необходимости)</p>
+                    <input type="text">
+                    <input type="submit" name="submit" value="Отправить">
+
+                </form>
+
+            </div>
+
+        </div>
+        <div id="back"></div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+
+</html>
