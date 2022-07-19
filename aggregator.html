@@ -16,10 +16,59 @@
 
 <body>
     <header>
-        <button class="account">Личный кабинет пользователя</button>
+        <div class="header_link">
+            <a class="history" href="history.html">История запросов</ф>
+                <a class="account modal" name="modal" href="#account">Личный кабинет пользователя</a>
+
+        </div>
         <h1>Новостной агрегатор ООЭ</h1>
 
     </header>
+    <div id="boxes">
+        <div id="account" class="window">
+            <div class="close"><a href="#">&times;</a></div>
+            <div class="modal-body">
+                <h3 style="text-align: start;">Заполните поля:</h3>
+                <form action="">
+                    <div class="name">
+                        <p>ФИО</p>
+                        <input type="text" required>
+
+                    </div>
+                    <div class="select_tb">
+
+                        <p>Имя ТБ</p>
+                        <select size="1" class="select" name="bank">
+
+                            <option value="ЦА">ЦА</option>
+                            <option value="ББ">ББ</option>
+                            <option value="ВВБ">ВВБ</option>
+                            <option value="ДВБ">ДВБ</option>
+                            <option value="МБ">МБ</option>
+                            <option value="ПБ">ПБ</option>
+                            <option value="СЗБ">СЗБ</option>
+                            <option value="СиББ">СиББ</option>
+                            <option value="СРБ">СРБ</option>
+                            <option value="УБ">УБ</option>
+                            <option value="ЮЗБ">ЮЗБ</option>
+                            <option value="ЦЧБ">ЦЧБ</option>
+                        </select>
+                    </div>
+                    <p>Электронная почта</p>
+                    <input type="email" required>
+                    <p>Изменить пароль</p>
+                    <input type="password" required>
+                    <p>Подтвердите пароль:</p>
+                    <input type="password" required>
+                    <input type="submit" name="submit" value="Сохранить">
+
+                </form>
+
+            </div>
+
+        </div>
+        <div id="back"></div>
+    </div>
     <form class="search" action="">
         <div class="search_parametrs">
             <div class="search_parametrs_period">

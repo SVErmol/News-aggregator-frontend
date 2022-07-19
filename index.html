@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Добро пожаловать!</title>
 </head>
 
@@ -20,6 +22,7 @@
 
     </header>
     <div class="authorization">
+
         <p>Добро пожаловать!<br> Если Вы-сотрудник СВА, введите логин и пароль:</p>
         <a href="#authorization" name="modal"><button>Войти</button></a>
 
@@ -48,12 +51,11 @@
         <p>Первый раз на сайте? Забыли пароль?<br>Получите доступ/восстановите пароль:</p>
         <a href="#registration" name="modal"><button>Получить доступ</button></a>
     </div>
-    <!-- Содержимое модального окна -->
     <div id="boxes">
         <div id="registration" class="window">
             <div class="close"><a href="#">&times;</a></div>
             <div class="modal-body">
-                <h3>Заполните поля:</h3>
+                <h3 style="text-align: start;">Заполните поля:</h3>
                 <form action="">
                     <div class="name">
                         <p>ФИО</p>
@@ -63,14 +65,20 @@
                     <div class="select_tb">
 
                         <p>Имя ТБ</p>
-                        <select size="3" class="select" name="bank">
-                            <option disabled>Выбрать</option>
+                        <select size="1" class="select" name="bank">
 
                             <option value="ЦА">ЦА</option>
                             <option value="ББ">ББ</option>
                             <option value="ВВБ">ВВБ</option>
                             <option value="ДВБ">ДВБ</option>
-                            <option selected value=">ЮЗБ">ЮЗБ</option>
+                            <option value="МБ">МБ</option>
+                            <option value="ПБ">ПБ</option>
+                            <option value="СЗБ">СЗБ</option>
+                            <option value="СиББ">СиББ</option>
+                            <option value="СРБ">СРБ</option>
+                            <option value="УБ">УБ</option>
+                            <option value="ЮЗБ">ЮЗБ</option>
+                            <option value="ЦЧБ">ЦЧБ</option>
                         </select>
                     </div>
                     <p>Электронная почта</p>

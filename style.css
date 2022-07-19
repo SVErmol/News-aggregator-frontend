@@ -4,7 +4,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0 20%;
     background-image: url(image/background.jpg);
-    background-size: 100%;
+    background-size: 140%;
     font-size: 25px;
     height: 100%;
 
@@ -25,6 +25,7 @@ h1 {
     margin-left: 5%;
     position: absolute;
     bottom: 0;
+    color: #032249;
 }
 
 h3 {
@@ -44,6 +45,10 @@ a {
     position: relative;
     left: 60%;
     text-decoration: none;
+}
+
+.header_link {
+    padding-top: 10px;
 }
 
 .authorization,
@@ -87,7 +92,8 @@ a {
 }
 
 #authorization,
-#registration {
+#registration,
+#account {
     width: 400px;
     height: max-content;
     background-color: #ffffff;
@@ -116,6 +122,7 @@ input[type="submit"] {
     width: max-content;
     text-align: center;
     cursor: pointer;
+    border: none;
 
 }
 
@@ -136,11 +143,21 @@ p {
 
 }
 
-.account {
+.history {
+    margin-left: auto;
+
+}
+
+.account,
+.history {
     background: #032249;
     text-align: end;
-    margin-left: auto;
+    margin-right: 1%;
+    color: #fff;
+    text-decoration: none;
+    padding: 1%;
 }
+
 
 .search_parametrs_period {
     display: flex;
@@ -207,6 +224,7 @@ input[type="checkbox"] {
 
 .search_parametrs_loading p {
     font-weight: bold;
+    text-align: start;
 }
 
 .search_parametrs_loading {
@@ -305,12 +323,13 @@ input[type="checkbox"] {
 }
 
 .or_style {
-    text-align: center;
+    text-align: center !important;
     color: #032249;
     font-size: 25px;
 }
 
-#registration form {
+#registration form,
+#account form {
     display: flex;
     flex-wrap: wrap;
 }
@@ -322,4 +341,131 @@ input[type="checkbox"] {
 .select_tb {
     width: 30%;
     margin-left: 7%;
+}
+
+.select {
+    display: block;
+    max-width: 215px;
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+}
+
+.new-select {
+    height: 100%;
+    position: relative;
+    border-bottom: 1px solid #000000;
+    /* padding-bottom: 20px; */
+    cursor: pointer;
+    user-select: none;
+    height: 39px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-select__list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+
+.new-select__list.on {
+    display: block;
+}
+
+.new-select__item span {
+    display: block;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+.new-select__item span:hover {
+    color: #032249;
+}
+
+#account input[type="submit"] {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table {
+    background-color: #ffffff;
+    border: 1px solid #000;
+    font-size: 20px;
+
+}
+
+table * {
+    padding: 0 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table td {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td:last-child {
+    text-align: start;
+}
+
+table th:last-child {
+    width: 300px;
+}
+
+table th {
+    width: max-content;
+}
+
+table td {
+    max-width: 50%;
+}
+
+table td:first-child {
+    padding: 0;
+}
+
+table td:first-child button {
+
+    border: none;
+    color: black;
+    background: none;
+}
+
+table tr:not(:first-child):hover {
+    background: rgb(204, 202, 202);
+    cursor: pointer;
+}
+
+table tr:not(:first-child):target {
+    background: rgb(204, 202, 202);
+    cursor: pointer;
+}
+
+
+.history_button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
