@@ -4,17 +4,18 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0 20%;
     background-image: url(image/background.jpg);
-    background-size: 140%;
+    background-size: 130% 100%;
     font-size: 25px;
     height: 100%;
-
+    /* background-repeat: no-repeat; */
+    background-position: right bottom;
+    background-attachment: fixed;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
+
     width: 100%;
-    height: 200px;
+    height: 170px;
     margin: auto;
     position: relative;
     margin-top: 1%;
@@ -25,11 +26,12 @@ h1 {
     margin-left: 5%;
     position: absolute;
     bottom: 0;
-    color: #032249;
+    color: #043e45;
 }
 
 h3 {
     font-size: 30px;
+    margin-top: 0;
 }
 
 p {
@@ -37,10 +39,12 @@ p {
 }
 
 form p {
-    font-size: 18px;
+    font-size: 17px;
+    margin-bottom: 0;
 }
 
-a {
+.registration a,
+.authorization a {
     width: min-content;
     position: relative;
     left: 60%;
@@ -48,7 +52,8 @@ a {
 }
 
 .header_link {
-    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .authorization,
@@ -77,6 +82,8 @@ a {
 #boxes a {
     color: #000;
     text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #boxes .window {
@@ -101,7 +108,7 @@ a {
 
 .close {
     position: relative;
-    width: 350px;
+    /* width: 350px; */
 }
 
 input {
@@ -140,30 +147,32 @@ p {
 
 .modal-body {
     padding: 0 40px;
-
-}
-
-.history {
-    margin-left: auto;
-
 }
 
 .account,
 .history {
-    background: #032249;
-    text-align: end;
+    background: #043e45;
+    text-align: center;
     margin-right: 1%;
     color: #fff;
+    padding: 9px;
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
-    padding: 1%;
+    cursor:pointer;
 }
-
-
+.exit{
+    color: #043e45;
+    border:3px solid  #043e45;
+    border-radius:4px;
+    padding: 3px;
+    background:#fff;
+}
 .search_parametrs_period {
     display: flex;
     flex-direction: row;
     width: 55%;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     max-width: 450px;
 }
 
@@ -172,8 +181,8 @@ p {
 }
 
 input[type="date"] {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     border: 1px solid black;
     height: 60%;
     margin-top: auto;
@@ -185,6 +194,16 @@ input[type="date"] {
     display: flex;
     flex-direction: column;
     font-weight: bold;
+}
+
+.search_parametrs p b {
+    color: #043e45;
+font-size: 21px;
+}
+
+.search_parametrs p {
+    color: black;
+    margin: revert;
 
 }
 
@@ -203,6 +222,7 @@ input[type="checkbox"] {
 .search input[type="submit"] {
     border-radius: 0;
     padding: 10px 20px;
+    background:black;
 
 }
 
@@ -242,6 +262,7 @@ input[type="checkbox"] {
     display: inline-flex;
     align-items: center;
     user-select: none;
+    padding: 5px 0;
 }
 
 .check_style+label::before {
@@ -268,7 +289,6 @@ input[type="checkbox"] {
 .search_parametrs_loading * {
     width: 100%;
     position: relative;
-    /* margin: 15px 0; */
     text-align: center;
 }
 
@@ -311,6 +331,7 @@ input[type="checkbox"] {
     justify-content: flex-start;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
+    background:white;
 }
 
 .input__file-button span {
@@ -352,10 +373,8 @@ input[type="checkbox"] {
 }
 
 .new-select {
-    height: 100%;
     position: relative;
     border-bottom: 1px solid #000000;
-    /* padding-bottom: 20px; */
     cursor: pointer;
     user-select: none;
     height: 39px;
@@ -400,7 +419,8 @@ table {
     background-color: #ffffff;
     border: 1px solid #000;
     font-size: 20px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table * {
@@ -416,27 +436,19 @@ td {
 
 table td {
     text-align: center;
+    max-width: 50%;
 }
 
-table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table td:last-child {
+table td:nth-child(5) {
     text-align: start;
 }
 
-table th:last-child {
+table th:nth-child(5) {
     width: 300px;
 }
 
 table th {
     width: max-content;
-}
-
-table td {
-    max-width: 50%;
 }
 
 table td:first-child {
@@ -460,12 +472,79 @@ table tr:not(:first-child):target {
     cursor: pointer;
 }
 
-
-.history_button {
+.history_button, .account_button {
     display: flex;
     justify-content: space-between;
     margin-top: 5%;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+.page_account_button{
+    background:white;
+    border-bottom:black 3px solid;
+    color:#043e45;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.page_account{
+    margin-top: 5%;
+}
+.account_button_back{
+    margin-left: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.table th, .table td {
+    border: 1px solid #888;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Hover */
+.table .hover td:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;    
+    bottom: 0px;    
+    left: 0px;
+    width: 105%;
+    border-top: 5px solid #043e45;
+    border-bottom: 5px solid #043e45;
+}
+.table .hover td:first-child:after {
+    border-left: 5px solid #043e45;
+}
+.table .hover td:last-child:after {
+    border-right: 5px solid #043e45;
+    width: auto;
+}
+
+/* Click */
+.table .active td:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;    
+    bottom: 0px;    
+    left: 0px;
+    width: 105%;
+    border-top: 5px solid #043e45;
+    border-bottom: 5px solid #043e45;
+}
+.table .active td:first-child:after {
+    border-left: 5px solid #043e45;
+}
+.table .active td:last-child:after {
+    border-right: 5px solid #043e45;
+    width: auto;
 }

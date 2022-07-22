@@ -97,5 +97,20 @@ $('.select').each(function() {
         }
     });
 });
+$(document).ready(function(){
+    $('.table tr').hover(function(){
+        $(this).addClass('hover');
+    }, function() {
+        $(this).removeClass('hover');
+    });
+
+    $('.table tr').click(function(){
+        $('.table tr').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+$(function() {
+    $( "#datepicker" ).datepicker();
+ });
 document.getElementById('date1').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
 document.getElementById('date2').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];

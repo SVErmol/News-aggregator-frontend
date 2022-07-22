@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,47 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-    <title>Добро пожаловать!</title>
+   <title>Личный кабинет</title>
 </head>
-
 <body>
     <header>
-        <h1>Новостной агрегатор ООЭ</h1>
-
+        <h1>Личный кабинет</h1>
     </header>
-    <div class="authorization">
-
-        <p>Добро пожаловать!<br> Если Вы сотрудник СВА, введите логин и пароль:</p>
-        <a href="#authorization" name="modal"><button>Войти</button></a>
-
+    <div class="page_account">
+        <a class="page_account_button modal" name="modal" href="#account">Изменить личные данные</a>
     </div>
     <div id="boxes">
-        <div id="authorization" class="window">
-            <div class="close"><a href="#">&times;</a></div>
-            <div class="modal-body">
-                <h3>Данные для входа:</h3>
-                <form action="">
-                    <p>Электронная почта:</p>
-                    <input type="email" required>
-                    <p>Пароль:</p>
-                    <input type="password" required>
-                    <input type="submit" name="submit" value="Отправить">
-
-                </form>
-
-            </div>
-
-        </div>
-        <div id="back"></div>
-    </div>
-
-    <div class="registration">
-        <p>Первый раз на сайте? Забыли пароль?<br>Получите доступ/восстановите пароль:</p>
-        <a href="#registration" name="modal"><button>Получить доступ</button></a>
-    </div>
-    <div id="boxes">
-        <div id="registration" class="window">
+        <div id="account" class="window">
             <div class="close"><a href="#">&times;</a></div>
             <div class="modal-body">
                 <h3 style="text-align: start;">Заполните поля:</h3>
@@ -80,9 +49,11 @@
                     </div>
                     <p>Электронная почта</p>
                     <input type="email" required>
-                    <p>Комментарий (при необходимости)</p>
-                    <input type="text">
-                    <input type="submit" name="submit" value="Отправить">
+                    <p>Изменить пароль:</p>
+                    <input type="password" required>
+                    <p>Подтвердите пароль:</p>
+                    <input type="password" required>
+                    <input type="submit" name="submit" value="Сохранить">
 
                 </form>
 
@@ -90,10 +61,11 @@
 
         </div>
         <div id="back"></div>
+        <div class="account_button">
+            <button class="account_button_back" onclick="location.href='aggregator.html'">Вернуться</button>
+        </div>
     </div>
 </body>
-
 <script src="script.js"></script>
-
 
 </html>
