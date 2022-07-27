@@ -149,8 +149,7 @@ p {
     padding: 0 40px;
 }
 
-.account,
-.history {
+.account {
     background: #043e45;
     text-align: center;
     margin-right: 1%;
@@ -159,15 +158,17 @@ p {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
 }
-.exit{
+
+.exit {
     color: #043e45;
-    border:3px solid  #043e45;
-    border-radius:4px;
+    border: 3px solid #043e45;
+    border-radius: 4px;
     padding: 3px;
-    background:#fff;
+    background: #fff;
 }
+
 .search_parametrs_period {
     display: flex;
     flex-direction: row;
@@ -198,7 +199,7 @@ input[type="date"] {
 
 .search_parametrs p b {
     color: #043e45;
-font-size: 21px;
+    font-size: 21px;
 }
 
 .search_parametrs p {
@@ -222,13 +223,13 @@ input[type="checkbox"] {
 .search input[type="submit"] {
     border-radius: 0;
     padding: 10px 20px;
-    background:black;
+    background: black;
 
 }
 
 .button-block {
     display: flex;
-    width: 50%;
+    width: 70%;
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -331,7 +332,7 @@ input[type="checkbox"] {
     justify-content: flex-start;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
-    background:white;
+    background: white;
 }
 
 .input__file-button span {
@@ -472,7 +473,8 @@ table tr:not(:first-child):target {
     cursor: pointer;
 }
 
-.history_button, .account_button {
+.history_button,
+.account_button {
     display: flex;
     justify-content: space-between;
     margin-top: 5%;
@@ -480,18 +482,26 @@ table tr:not(:first-child):target {
     margin-left: auto;
     margin-right: auto;
 }
-.page_account_button{
-    background:white;
-    border-bottom:black 3px solid;
-    color:#043e45;
+
+.page_account_button {
+    background: white;
+    border-bottom: black 3px solid;
+    color: #043e45;
     font-size: 30px;
     text-decoration: none;
     font-weight: bold;
+    margin: 5% 0;
+    padding: 0 50px;
 }
-.page_account{
+
+.page_account {
     margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
 }
-.account_button_back{
+
+.account_button_back {
     margin-left: auto;
 }
 
@@ -500,13 +510,18 @@ table tr:not(:first-child):target {
     border-spacing: 0;
     width: 100%;
 }
-.table th, .table td {
+.table th{
+    white-space: nowrap;
+}
+.table th,
+.table td {
     border: 1px solid #888;
     padding: 10px;
     text-align: center;
     vertical-align: middle;
     position: relative;
     cursor: pointer;
+    width: max-content;
 }
 
 /* Hover */
@@ -514,18 +529,21 @@ table tr:not(:first-child):target {
     content: '';
     position: absolute;
     top: 0px;
-    right: 0px;    
-    bottom: 0px;    
+    right: 0px;
+    bottom: 0px;
     left: 0px;
     width: 105%;
-    border-top: 5px solid #043e45;
-    border-bottom: 5px solid #043e45;
+    border-top: 2px solid #043e45;
+    border-bottom: 2px solid #043e45;
+    z-index: -1;
 }
+
 .table .hover td:first-child:after {
-    border-left: 5px solid #043e45;
+    border-left: 2px solid #043e45;
 }
+
 .table .hover td:last-child:after {
-    border-right: 5px solid #043e45;
+    border-right: 2px solid #043e45;
     width: auto;
 }
 
@@ -534,17 +552,64 @@ table tr:not(:first-child):target {
     content: '';
     position: absolute;
     top: 0px;
-    right: 0px;    
-    bottom: 0px;    
+    right: 0px;
+    bottom: 0px;
     left: 0px;
     width: 105%;
-    border-top: 5px solid #043e45;
-    border-bottom: 5px solid #043e45;
+    border-top: 2px solid #043e45;
+    border-bottom: 2px solid #043e45;
 }
+
 .table .active td:first-child:after {
-    border-left: 5px solid #043e45;
+    border-left: 2px solid #043e45;
 }
+
 .table .active td:last-child:after {
-    border-right: 5px solid #043e45;
+    border-right: 2px solid #043e45;
     width: auto;
+}
+
+.table a {
+    z-index: 5;
+    border:1px solid black;
+    text-decoration: none;
+    color:black;
+    background:rgb(210, 210, 210);
+}
+.table a:hover{
+background:#fff;
+}
+
+
+@media (max-width:1375px) {
+    header {
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    body {
+        margin: 0 10%;
+    }
+
+    .button-block {
+        width: 100%;
+    }
+}
+
+@media (max-width:945px) {
+    body {
+        margin: 0;
+    }
+
+    .search_parametrs_period {
+        width: 100%;
+    }
+
+    .search_parametrs_site {
+        width: 100%;
+    }
+
 }
