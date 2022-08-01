@@ -395,6 +395,8 @@ input[type="checkbox"] {
     z-index: 2;
     background: #fff;
     user-select: none;
+    overflow-x: auto;
+    height: 250px;
 }
 
 .new-select__list.on {
@@ -418,19 +420,21 @@ input[type="checkbox"] {
 
 table {
     background-color: #ffffff;
-    border: 1px solid #000;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid black;
+
 }
 
 table * {
     padding: 0 10px;
 }
 
-table,
+
 th,
-td {
+td,
+thead {
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -505,23 +509,41 @@ table tr:not(:first-child):target {
     margin-left: auto;
 }
 
+.table-block {
+    overflow-y: auto;
+    /* height: ; */
+    height: 500px;
+}
+
 .table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
 }
-.table th{
+
+.table thead {
     white-space: nowrap;
 }
+
+thead {
+    position: sticky;
+    top: -1px;
+    border-collapse: collapse;
+    background: rgb(245, 245, 245);
+    height: auto;
+    z-index: 1000;
+}
+
+
 .table th,
 .table td {
-    border: 1px solid #888;
     padding: 10px;
     text-align: center;
     vertical-align: middle;
     position: relative;
     cursor: pointer;
     width: max-content;
+    border-top: none;
 }
 
 /* Hover */
@@ -571,15 +593,15 @@ table tr:not(:first-child):target {
 
 .table a {
     z-index: 5;
-    border:1px solid black;
+    border: 1px solid black;
     text-decoration: none;
-    color:black;
-    background:rgb(210, 210, 210);
-}
-.table a:hover{
-background:#fff;
+    color: black;
+    background: rgb(210, 210, 210);
 }
 
+.table a:hover {
+    background: #fff;
+}
 
 @media (max-width:1375px) {
     header {
@@ -588,6 +610,7 @@ background:#fff;
 
     h1 {
         font-size: 40px;
+
     }
 
     body {
@@ -601,7 +624,8 @@ background:#fff;
 
 @media (max-width:945px) {
     body {
-        margin: 0;
+        margin: 3px;
+        font-size: 21px;
     }
 
     .search_parametrs_period {
@@ -609,7 +633,133 @@ background:#fff;
     }
 
     .search_parametrs_site {
+        width: 55%;
+    }
+
+    #authorization,
+    #registration,
+    #account {
+        width: auto;
+        margin-left: auto;
+    }
+
+    #boxes .window {
+        width: auto;
+        margin: 0 2%;
+        left: 0 !important;
+    }
+
+    #authorization input[type="submit"],
+    #registration input[type="submit"] {
         width: 100%;
     }
 
+    #back {
+        width: 100%;
+    }
+
+    .authorization,
+    .registration {
+        width: auto;
+        margin: 2%;
+    }
+
+    .registration a,
+    .authorization a {
+        left: 0;
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .search_parametrs_site {
+        width: 55%;
+    }
+
+    .table-block {
+        min-width: 400px;
+        overflow: scroll;
+        min-height: 100px;
+    }
+
+    td {
+        padding: 5px;
+
+    }
+
+    table {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:625px) {
+    h1 {
+        font-size: 35px;
+        margin: 0;
+        margin-bottom: 4%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .modal-body {
+        padding: 0 20px;
+    }
+
+    #boxes .window {
+        left: 0 !important;
+        margin: 0 5%;
+        top: 10px;
+    }
+
+    .button-block {
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search input[type="submit"] {
+        width: 100%;
+    }
+
+    header {
+        height: 150px;
+    }
+
+    .account {
+        font-size: 15px;
+    }
+
+    .exit {
+        width: min-content;
+    }
+
+    .search_parametrs_site {
+        width: 100%;
+    }
+
+    .history_button {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+
+    .history_button * {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    .page_account_button {
+        padding: 0 15px;
+    }
+
+    .page_account {
+        margin: 0;
+    }
+    #account input[type="submit"]{
+        width: 100%;
+    }
 }
